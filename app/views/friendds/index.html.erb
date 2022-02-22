@@ -1,0 +1,17 @@
+
+
+<h1>Friend List</h1>
+
+
+<div id="friendds">
+  <% @friendds.each do |friendd| %>
+   <% if friendd.user == current_user %>
+    <%= render friendd %>
+    <p>
+      <%= link_to "Show this friend", friendd ,class:"btn btn-secondary" %>
+    </p>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "New friend", new_friendd_path, class:"btn btn-success" %>
